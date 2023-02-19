@@ -1,0 +1,41 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1.title {
+    font-size: 4.0em;
+}
+
+a.btn {
+    border: 1px solid #007bff;
+    background: #007bff;
+    padding:10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+a.btn:hover {
+    background: white;
+    color: #007bff;
+}
+
+img.socials-btn {
+    padding:2px;
+    border: 1px white;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+img.socials-btn:hover {
+    background: grey;
+}
