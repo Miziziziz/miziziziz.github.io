@@ -56,6 +56,10 @@ a {
     font-size: 1.2em;
 }
 
+a {
+    color: gray;
+}
+
 a.btn {
     border: 2px solid #ffffff;
     background: #000000;
