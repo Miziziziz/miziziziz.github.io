@@ -18,12 +18,25 @@
     <h3>by Miziziziz</h3>
     <br>
     <hr>
-	
-    <h1 id="game-title"></h1>
-    <iframe id="game-trailer" class="game-trailer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p id="game-description"></p>
-    <a class="buy-btn" id="buy-btn" href="https://buy.stripe.com/" target="_blank" rel="noopener noreferrer">Buy</a>
-    <span id="promo-notif"></span>
+	<div id="game-store" style="display: none;">
+        <h1 id="game-title"></h1>
+        <iframe id="game-trailer" class="game-trailer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p id="game-description"></p>
+        <a class="buy-btn" id="buy-btn" href="https://buy.stripe.com/" target="_blank" rel="noopener noreferrer">Buy</a>
+        <span id="promo-notif"></span>
+
+        <br>
+        <p id="steam-info">Steam key included with purchase.</p>
+    </div>
+
+    <p id="game-select" style="display: none;">
+        Choose game to purchase:<br><br>
+        <a class="btn" href="#" onclick="setupStore('Endoparasitic'); return false;">Endoparasitic</a><br><br>
+        <a class="btn" href="#" onclick="setupStore('Endoparasitic2'); return false;">Endoparasitic 2</a><br><br>
+        <a class="btn" href="#" onclick="setupStore('EndoparasiticVR'); return false;">Endoparasitic VR</a><br><br>
+        <a class="btn" href="#" onclick="setupStore('WroughtFlesh'); return false;">Wrought Flesh</a><br><br>
+        <a class="btn" href="#" onclick="setupStore('Voyager19'); return false;">Voyager-19</a><br><br>
+    </p>
 
     <br>
     <br>
@@ -35,6 +48,8 @@
         <a href="https://twitter.com/miziziziz" target="_blank" rel="noopener noreferrer"><img class="socials-btn" src="assets/logos/twitter.png" alt="Twitter" width="32" /></a>
         <a href="https://discord.gg/JXA74uG" target="_blank" rel="noopener noreferrer"><img class="socials-btn" src="assets/logos/discord.png" alt="Discord" width="32" /></a>
         <p>miz@deeproot.dev</p>
+        <a href="affiliate_info">Affiliate Program</a>
+        <br>
         <a href="refund_policy">Refunds</a>
         <br>
         <a href="privacy_policy">Privacy Policy</a>
@@ -75,11 +90,12 @@
                 "payment_link": "https://buy.stripe.com/aEU8zc09r1kl2w84gg"
                 },
         };
-        function setupStore(){
+        function setupStoreOnPageLoad(){
             var urlParams = new URLSearchParams(window.location.search);
-            var promoCode = urlParams.get('promoCode');
             var gameName = urlParams.get('game');
-            
+            setupStore(gameName);
+        }
+        function setupStore(gameName){
             if (gameName && gameName in storeData){
                 var gameHeader = document.getElementById('game-title');
                 var gameDesc = document.getElementById('game-description');
@@ -90,16 +106,25 @@
                 gameDesc.textContent = storeData[gameName]['description'];
                 gameTrailer.src = storeData[gameName]['yt_link'];
                 buyButton.href = storeData[gameName]['payment_link'];
-            }
-            if (promoCode) {
-                var buyButton = document.getElementById('buy-btn');
-                buyButton.href += `?prefilled_promo_code=${encodeURIComponent(promoCode)}`;
+                var urlParams = new URLSearchParams(window.location.search);
+                var promoCode = urlParams.get('promoCode');
+                if (promoCode) {
+                    var buyButton = document.getElementById('buy-btn');
+                    buyButton.href += `?prefilled_promo_code=${encodeURIComponent(promoCode)}`;
 
-                var promoText = document.getElementById('promo-notif');
-                promoText.textContent = `Promo Code '${promoCode}' Applied!`;
+                    var promoText = document.getElementById('promo-notif');
+                    promoText.textContent = `Promo Code '${promoCode}' Applied!`;
+                }
+                
+                document.getElementById("game-select").style.display = 'none';
+                document.getElementById("game-store").style.display = '';
+            }
+            else{
+                document.getElementById("game-select").style.display = '';
+                document.getElementById("game-store").style.display = 'none';
             }
         }
-        window.onload = setupStore;        
+        window.onload = setupStoreOnPageLoad;        
     </script>
 
 </body>
