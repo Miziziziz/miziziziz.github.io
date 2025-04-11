@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Deep Root Interactive</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!-- <a href="/">back</a> -->
+   <h1>Affiliate Link Builder</h1>
+   
+   <h2>Enter Promo Code:</h2>
+   <input type="text" id="promocode-input" name="promocode-input"><br><br>
+   
+   <h2>Choose game to promote:</h2>
+   <p id="game-select">
+		<button onclick="generateLinkForGame('Endoparasitic')">Endoparasitic</button><br>
+		<button onclick="generateLinkForGame('Endoparasitic2')">Endoparasitic 2</button><br>
+		<button onclick="generateLinkForGame('EndoparasiticVR')">Endoparasitic VR</button><br>
+		<button onclick="generateLinkForGame('WroughtFlesh')">Wrought Flesh</button><br>
+		<button onclick="generateLinkForGame('Voyager19')">Voyager-19</button><br>
+    </p>
+	
+	<h2>Final Affiliate Link:</h2>
+	<!-- <a id="affiliate-link" href="/">_____</a><br><br> -->
+	<span id="affiliate-link">_______________</span><br><br>
+	
+	<button id="copy-btn" style="display: none;" onclick="copyLink()">Copy link to clipboard</button>
+	<label id="copy-popup" style="display: none;">copied!</label>
+	
+<script>
+        function generateLinkForGame(gameName){
+			var input_elm = document.getElementById("promocode-input");
+			input_elm.value = input_elm.value.trim();
+			var pc = input_elm.value;
+			if (pc == ""){
+				alert("Please Enter A Promo Code");
+				return;
+			}
+			var final_link = `http://www.deeproot.dev/store?game=${gameName}&promoCode=${pc}`;
+			
+			var promoText = document.getElementById('affiliate-link');
+            promoText.textContent = final_link;
+			
+			document.getElementById("copy-btn").style.display = '';
+        }
+        function copyLink(gameName){
+			var aff_link = document.getElementById('affiliate-link').textContent;
+			navigator.clipboard.writeText(aff_link);
+			
+			var copy_popup = document.getElementById('copy-popup');
+			copy_popup.style.display = '';
+			fadeOut(copy_popup);
+		}
+		
+		function fadeOut(element) {
+		  let opacity = 1;
+
+		  const timer = setInterval(() => {
+			if (opacity <= 0.1) {
+			  clearInterval(timer);
+			  element.style.display = 'none';
+			}
+			element.style.opacity = opacity;
+			opacity -= 0.1;
+		  }, 50);
+		}
+		
+		
+    </script>
+</body>
+</html>  
+
