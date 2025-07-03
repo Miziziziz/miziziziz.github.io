@@ -1,0 +1,48 @@
+{
+	"highlight": "endoparasitic_2",
+	"highlight_tag": "just_released",
+	"highlight_comment": "coming_soon, just_released",
+	
+    "games": {
+        "wrought_flesh": {
+            "name": "Wrought Flesh",
+			"short_description": "Equip organs, shoot guns.",
+            "description": "Rip out organs and equip them in your own body. Fight biopunk monsters and drugged-up space bandits. You are a Gajeshian Cultist: A near-mythological being built from the bodies of long-dead saints.",
+            "store_page": "https://store.steampowered.com/app/1762010/Wrought_Flesh/",
+            "yt_link": "https://www.youtube.com/embed/ssjbt_6RmKY",
+            "payment_link": "https://buy.stripe.com/aEU3eSf4le775Ik9AE"
+        },
+        "endoparasitic": {
+            "name": "Endoparasitic",
+			"short_description": "One limb survival horror.",
+            "description": "Three limbs ripped off, infected with a deadly parasite, you must save your research. Drag yourself through the corridors of a secret research lab on a remote asteroid, fight off horribly mutated monsters, inject countless syringes of vaccines, and survive at all costs.",
+            "store_page": "https://store.steampowered.com/app/2124780/Endoparasitic/",
+            "yt_link": "https://www.youtube.com/embed/dHTxm1PD-bQ",
+            "payment_link": "https://buy.stripe.com/eVaeXA7BT8MNeeQ001"
+        },
+        "endoparasitic_2": {
+            "name": "Endoparasitic 2",
+			"short_description": "One limb survival horror, the sequel.",
+            "description": "Three limbs ripped off, infected with a deadly parasite, you must survive. Drag yourself through the hallways of an infested arcship, fight off twisted eldritch creatures, craft vaccines and ammunition, and escape to civilization. ",
+            "store_page": "https://store.steampowered.com/app/2990640/Endoparasitic_2/",
+            "yt_link": "https://www.youtube.com/embed/orbJ6-Hd0n8",
+            "payment_link": "https://buy.stripe.com/3csbLocWdfbbgmY7su"
+        },
+        "endoparasitic_vr": {
+            "name": "Endoparasitic VR",
+			"short_description": "One limb survival horror in VR",
+            "description": "A complete VR port of the original Endoparasitic.",
+            "store_page": "https://store.steampowered.com/app/2634140/Endoparasitic_VR/",
+            "yt_link": "https://www.youtube.com/embed/p4wBwOsl_3o",
+            "payment_link": "https://buy.stripe.com/00g16K1dv2op8Uw8wz"
+        },
+        "voyager_19": {
+            "name": "Voyager-19",
+			"short_description": "Cosmic horror space exploration.",
+            "description": "A short horror game where you control a decaying spacecraft exploring distant star systems.",
+            "store_page": "https://store.steampowered.com/app/2925510/Voyager19/",
+            "yt_link": "https://www.youtube.com/embed/FZ8I4ONvkFY",
+            "payment_link": "https://buy.stripe.com/aEU8zc09r1kl2w84gg"
+        }
+    }
+}
