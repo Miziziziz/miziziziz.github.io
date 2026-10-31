@@ -1,9 +1,16 @@
 {
-	"highlight": "",
-	"highlight_tag": "",
+	"highlight": "walkable_cities",
+	"highlight_tag": "coming_soon",
 	"highlight_comment": "coming_soon, just_released",
 	
     "games": {
+		"walkable_cities": {
+            "name": "Walkable Cities",
+			"short_description": "Single input walking/spinning game.",
+            "description": "Single-input walking simulator: Spin around one foot, press a button to spin around the other foot. Explore diverse cityscapes, solve puzzles, minimize your step count, and play soccer with dogs.",
+            "store_page": "https://store.steampowered.com/app/5015460/Walkable_Cities/",
+            "yt_link": "https://www.youtube.com/watch?v=MPiRApONQxU"
+        },
 		"camelot_10000ce": {
             "name": "Camelot 10000CE",
 			"short_description": "Dark fantasy typing rpg.",
