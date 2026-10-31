@@ -11,6 +11,13 @@
             "store_page": "https://store.steampowered.com/app/5015460/Walkable_Cities/",
             "yt_link": "https://www.youtube.com/watch?v=MPiRApONQxU"
         },
+		"homauton": {
+            "name": "Homauton",
+			"short_description": "A tiny horror automation game.",
+            "description": "A tiny horror automation game. Trapped in a cramped landing pod with only a hibernation chamber and drone control computer, investigate the abandoned surface of a dead planet and build a rocket to escape before your family back home dies of old age. ",
+            "store_page": "https://store.steampowered.com/app/4871920/Homauton/",
+            "yt_link": "https://www.youtube.com/watch?v=_k5IPJcvNeg"
+        },
 		"camelot_10000ce": {
             "name": "Camelot 10000CE",
 			"short_description": "Dark fantasy typing rpg.",
